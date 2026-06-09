@@ -99,10 +99,6 @@ if img is not None:
         st.write(f"✅ **Total Anomalies Identified:** {num_detections}")
         st.write(f"The model successfully classified **{num_detections}** targets in this scan.")
 
-    with res_col2:
-        st.info("💡 **Exhibition Tip:** Look at how the bounding boxes hug the peak apexes of the hyperbolas! This represents real-time feature extraction mapping.")
-
-
 
 else:
     if mode == "Upload My Own Radargram":

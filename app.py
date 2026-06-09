@@ -7,7 +7,7 @@ import os
 
 # --- 1. PAGE SETUP (OFFICIAL & MINIMALIST) ---
 st.set_page_config(
-    page_title="GPR-X Detector", 
+    page_title="GPR-X", 
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -33,7 +33,7 @@ st.markdown("""
 # Minimalist Corporate Title Header
 st.markdown("""
     <div style="padding-bottom: 15px; border-bottom: 1px solid #1E293B; margin-bottom: 30px;">
-        <h1 style="color:#FFFFFF; margin:0; font-size:2rem; font-weight:700; letter-spacing:-0.5px;">GPR-X Subsurface Analysis Suite</h1>
+        <h1 style="color:#FFFFFF; margin:0; font-size:2rem; font-weight:700; letter-spacing:-0.5px;">AI-Based Subsurface GPR Detection</h1>
         <p style="color:#64748B; margin:5px 0 0 0; font-size:0.95rem;">Automated Computer Vision Target Identification</p>
     </div>
 """, unsafe_allow_html=True)

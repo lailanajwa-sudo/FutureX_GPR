@@ -19,12 +19,12 @@ def load_model():
 try:
     model = load_model()
 except Exception as e:
-    st.error("Model 'best.pt' not found. Please upload it to your repository.")
+    st.error("Model 'best.pt' not found. Please upload it to your GitHub repository.")
 
 # --- 3. EXHIBITION INTERACTIVE WORKFLOW ---
 st.divider()
 
-# Creating two tabs/options to split Upload vs Demo Mode
+# Creating two options to split Upload vs Demo Mode
 mode = st.radio(
     "Choose how you want to try GPR-X:",
     ["Use Exhibition Sample Data (Interactive Demo)", "Upload My Own Radargram"],
@@ -38,16 +38,20 @@ if mode == "Upload My Own Radargram":
     if uploaded_file:
         img = Image.open(uploaded_file).convert("RGB")
 else:
-    # Exhibition Mode: Dropdown for demo files
     st.markdown("### 🎯 Select a sample radargram dataset below to test the AI:")
     
-    # Define your samples matching the filenames in your 'samples' folder
+    # Dictionary matching your 7 new short filenames perfectly
     sample_options = {
-        "Sample 1: Buried Utility Pipeline": "samples/utility_line.jpg",
-        "Sample 2: Concrete Rebar Grid": "samples/concrete_rebar.png"
+        "1. Lab Test: Buried Cavity": "samples/exp_cavity.jpg",
+        "2. Lab Test: Metal Pipe": "samples/exp_metal_pipe.jpg",
+        "3. Lab Test: Concrete Block": "samples/exp_concrete.jpg",
+        "4. Lab Test: Pipe & Cavity Combo": "samples/exp_pipe_cavity.jpg",
+        "5. Lab Test: Full Mix (Concrete, Pipe, Cavity)": "samples/exp_all.jpg",
+        "6. Field Scan: Manhole Cover": "samples/real_manhole.jpg",
+        "7. Field Scan: Real-World Sinkhole / Cavity": "samples/real_cavity.jpg"
     }
     
-    selected_sample = st.selectbox("Pick a scenario:", list(sample_options.keys()))
+    selected_sample = st.selectbox("Pick a scenario to detect:", list(sample_options.keys()))
     sample_path = sample_options[selected_sample]
     
     # Check if file exists, then load it
@@ -55,7 +59,7 @@ else:
         img = Image.open(sample_path).convert("RGB")
         st.success(f"Loaded {selected_sample} successfully!")
     else:
-        st.warning(f"Demo file not found at `{sample_path}`. Please create the folder and add your images.")
+        st.warning(f"Demo file not found at `{sample_path}`. Make sure it is saved in your samples folder.")
 
 # --- 4. PROCESSING & DETECTION LAYER ---
 if img is not None:
@@ -73,7 +77,7 @@ if img is not None:
     # --- 5. DISPLAY RESULTS ---
     st.markdown("### 📊 Classification Results")
     
-    # Simple Side-by-Side
+    # Simple Side-by-Side layout
     col1, col2 = st.columns(2)
     with col1:
         st.write("**Original Input Scan**")

@@ -42,12 +42,12 @@ else:
     
     # Dictionary matching your 7 new short filenames perfectly
     sample_options = {
-        "1. Lab Test: Buried Cavity": "samples/exp_cavity.jpg",
-        "2. Lab Test: Metal Pipe": "samples/exp_metal_pipe.jpg",
-        "3. Lab Test: Concrete Block": "samples/exp_concrete.jpg",
-        "4. Lab Test: Pipe & Cavity Combo": "samples/exp_pipe_cavity.jpg",
-        "5. Lab Test: Full Mix (Concrete, Pipe, Cavity)": "samples/exp_all.jpg",
-        "6. Field Scan: Manhole Cover": "samples/real_manhole.jpg",
+        "1. Lab Test: Buried Cavity": "samples/exp_cavity.png",
+        "2. Lab Test: Metal Pipe": "samples/exp_metal_pipe.png",
+        "3. Lab Test: Concrete Block": "samples/exp_concrete.png",
+        "4. Lab Test: Pipe & Cavity Combo": "samples/exp_pipe_cavity.png",
+        "5. Lab Test: Full Mix (Concrete, Pipe, Cavity)": "samples/exp_all.png",
+        "6. Field Scan: Manhole Cover": "samples/real_manhole.JPG",
         "7. Field Scan: Real-World Sinkhole / Cavity": "samples/real_cavity.jpg"
     }
     

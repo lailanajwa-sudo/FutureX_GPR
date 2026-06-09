@@ -68,9 +68,9 @@ else:
         "-- Select a Scenario --": None,
         "1. Lab Test: Buried Cavity": "samples/exp_cavity.png",
         "2. Lab Test: Metal Pipe": "samples/exp_metal_pipe.png",
-        "3. Lab Test: Concrete Block": "samples/exp_concrete.png",
+        "3. Lab Test: Brick Block": "samples/exp_concrete.png",
         "4. Lab Test: Pipe & Cavity": "samples/exp_pipe_cavity.png",
-        "5. Lab Test: Concrete, Pipe, Cavity": "samples/exp_all.png",
+        "5. Lab Test: Brick, Pipe, Cavity": "samples/exp_all.png",
         "6. Field Scan: Manhole Cover": "samples/real_manhole.jpg",
         "7. Field Scan: Real-World Sinkhole / Cavity": "samples/real_cavity.JPG"
     }

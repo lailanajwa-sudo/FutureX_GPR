@@ -47,8 +47,8 @@ else:
         "3. Lab Test: Concrete Block": "samples/exp_concrete.png",
         "4. Lab Test: Pipe & Cavity Combo": "samples/exp_pipe_cavity.png",
         "5. Lab Test: Full Mix (Concrete, Pipe, Cavity)": "samples/exp_all.png",
-        "6. Field Scan: Manhole Cover": "samples/real_manhole.JPG",
-        "7. Field Scan: Real-World Sinkhole / Cavity": "samples/real_cavity.jpg"
+        "6. Field Scan: Manhole Cover": "samples/real_manhole.jpg",
+        "7. Field Scan: Real-World Sinkhole / Cavity": "samples/real_cavity.JPG"
     }
     
     selected_sample = st.selectbox("Pick a scenario to detect:", list(sample_options.keys()))
